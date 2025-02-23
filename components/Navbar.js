@@ -2,7 +2,7 @@ import Image from "next/image";
 
 export default function Navbar() {
   return (
-    <nav className="bg-white w-full">
+    <nav className="bg-white w-full sticky top-0 z-10">
       <div className="flex p-1 items-center">
         <a href="#">
           <Image
