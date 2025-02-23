@@ -1,96 +1,11 @@
 import Image from "next/image";
-import HeroSection from "./components/HeroSection";
+import HeroSection from "../components/HeroSection";
 
 export default function Home() {
   return (
     <main className="bg-gray-100 text-gray-900">
       {/* Navbar */}
-      <nav className="bg-white w-full">
-        <div className="flex p-1 items-center">
-          <a href="#">
-            <Image
-              src="/Logo_edited.png"
-              alt="SLCR Logo"
-              width={220}
-              height={50}
-            />
-          </a>
-          <div className="flex-grow text-center">
-            <h1 className="text-4xl font-bold text-blue-500">
-              Smart Laboratory On Clean River
-            </h1>
-          </div>
-        </div>
-
-        <div className="mx-auto flex justify-between items-center bg-blue-500 text-white pl-10">
-          <ul className="flex space-x-10 text-2xl p-3">
-            <li>
-              <a
-                href="#"
-                className="hover:text-black hover:underline hover:underline-offset-4"
-              >
-                Home
-              </a>
-            </li>
-            <li>
-              <a
-                href="#"
-                className="hover:text-black hover:underline hover:underline-offset-4"
-              >
-                About
-              </a>
-            </li>
-            <li>
-              <a
-                href="#"
-                className="hover:text-black hover:underline hover:underline-offset-4"
-              >
-                Activities
-              </a>
-            </li>
-            <li>
-              <a
-                href="#"
-                className="hover:text-black hover:underline hover:underline-offset-4"
-              >
-                Project
-              </a>
-            </li>
-            <li>
-              <a
-                href="#"
-                className="hover:text-black hover:underline hover:underline-offset-4"
-              >
-                Event
-              </a>
-            </li>
-            <li>
-              <a
-                href="#"
-                className="hover:text-black hover:underline hover:underline-offset-4"
-              >
-                Data
-              </a>
-            </li>
-            <li>
-              <a
-                href="#"
-                className="hover:text-black hover:underline hover:underline-offset-4"
-              >
-                Gallery
-              </a>
-            </li>
-            <li>
-              <a
-                href="#"
-                className="hover:text-black hover:underline hover:underline-offset-4"
-              >
-                Contact
-              </a>
-            </li>
-          </ul>
-        </div>
-      </nav>
+      
 
       <HeroSection />
       {/* About Section */}
@@ -221,41 +136,6 @@ export default function Home() {
           </div>
         </div>
       </section> */}
-
-      {/* Footer */}
-      <footer className="bg-gray-900 text-white text-center py-6">
-        <p>© 2024 SLCR Varanasi | All rights reserved.</p>
-        <p>SLCR, Indian Institute of Technology(BHU), Varanasi.</p>
-      </footer>
-
-      {/* Logos Section */}
-      <div className="bg-gray-100 py-4 flex justify-center items-center gap-8 flex-wrap">
-      <Image
-          src="/iitbhu.avif"
-          alt="IITBHU Logo"
-          width={100}
-          height={50}
-        />
-        <Image
-          src="/namiti_gange.gif"
-          alt="Namami Gange Logo"
-          width={150}
-          height={50}
-        />
-        <Image
-          src="/jal_shakti.avif"
-          alt="Jal Shakti Logo"
-          width={200}
-          height={50}
-        />
-        <Image src="/denmark.png" alt="Denmark Logo" width={300} height={100} />
-        <Image
-          src="/india_wris.png"
-          alt="India WRIS Logo"
-          width={50}
-          height={50}
-        />
-      </div>
     </main>
   );
 }
