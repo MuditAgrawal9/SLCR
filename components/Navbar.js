@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 
 export default function Navbar() {
   return (
@@ -13,7 +14,7 @@ export default function Navbar() {
           />
         </a>
         <div className="flex-grow text-center">
-          <h1 className="text-4xl font-bold text-blue-500">
+          <h1 className="text-5xl font-bold text-blue-500">
             Smart Laboratory On Clean River
           </h1>
         </div>
@@ -22,68 +23,68 @@ export default function Navbar() {
       <div className="mx-auto flex justify-between items-center bg-blue-500 text-white pl-10">
         <ul className="flex space-x-10 text-2xl p-3">
           <li>
-            <a
-              href="#"
+            <Link
+              href="/"
               className="hover:text-black hover:underline hover:underline-offset-4"
             >
               Home
-            </a>
+            </Link>
           </li>
           <li>
-            <a
-              href="#"
+            <Link
+              href="/about"
               className="hover:text-black hover:underline hover:underline-offset-4"
             >
               About
-            </a>
+            </Link>
           </li>
           <li>
-            <a
-              href="#"
+            <Link
+              href="/activities"
               className="hover:text-black hover:underline hover:underline-offset-4"
             >
               Activities
-            </a>
+            </Link>
           </li>
           <li>
-            <a
-              href="#"
+            <Link
+              href="/projects"
               className="hover:text-black hover:underline hover:underline-offset-4"
             >
-              Project
-            </a>
+              Projects
+            </Link>
           </li>
           <li>
-            <a
+            <Link
               href="#"
               className="hover:text-black hover:underline hover:underline-offset-4"
             >
               Event
-            </a>
+            </Link>
           </li>
           <li>
-            <a
+            <Link
               href="#"
               className="hover:text-black hover:underline hover:underline-offset-4"
             >
               Data
-            </a>
+            </Link>
           </li>
           <li>
-            <a
-              href="#"
+            <Link
+              href="/gallery"
               className="hover:text-black hover:underline hover:underline-offset-4"
             >
               Gallery
-            </a>
+            </Link>
           </li>
           <li>
-            <a
-              href="#"
+            <Link
+              href="/contact"
               className="hover:text-black hover:underline hover:underline-offset-4"
             >
               Contact
-            </a>
+            </Link>
           </li>
         </ul>
       </div>
