@@ -3,7 +3,7 @@ import { useState, useEffect } from "react";
 import Image from "next/image";
 import { motion, AnimatePresence } from "framer-motion";
 
-const images = ["/image1.png", "/image2.jpg", "/image3.jpg", "/image3.avif"];
+const images = ["/image1.png", "/image2.jpg", "/image4.jpg", "/image3.avif"];
 
 export default function HeroSection() {
   const [currentIndex, setCurrentIndex] = useState(0);
