@@ -1,6 +1,6 @@
 import ComingSoon from "@/components/ComingSoon";
 
-export default function Activities() {
+export default function Data() {
   return (
     <section>
       <ComingSoon />
