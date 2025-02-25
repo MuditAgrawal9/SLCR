@@ -12,7 +12,7 @@ const fetchGalleryImages = () => [
   "/slcr3img.JPG",
   "/slcr10.jpg",
   "/slcr14.jpg",
-  "/image3.jpg",
+  "/image4.jpg",
 ];
 
 export default function Gallery() {
