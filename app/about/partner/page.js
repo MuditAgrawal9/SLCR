@@ -1,6 +1,6 @@
 import ComingSoon from "@/components/ComingSoon";
 
-export default function About() {
+export default function Partner() {
   return (
     <section>
       <ComingSoon />
