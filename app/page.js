@@ -39,10 +39,10 @@ export default function Home() {
       {sections.map((section, index) => (
         <motion.section
           key={index}
-          initial={{ opacity: 0, x: index % 2 === 0 ? -100 : 100, scale: 0.9 }}
-          whileInView={{ opacity: 1, x: 0, scale: 1 }}
+          initial={{ opacity: 0, y: 50, scale: 0.9 }}
+          whileInView={{ opacity: 1, y: 0, scale: 1 }}
           viewport={{ once: false }}
-          transition={{ duration: 0.6,}}
+          transition={{ duration: 0.6 }}
           className={`py-12 px-6 text-center ${
             index % 2 === 0 ? "bg-white" : "bg-gray-100"
           }`}
