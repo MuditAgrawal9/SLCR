@@ -1,3 +1,9 @@
+import ComingSoon from "@/components/ComingSoon";
+
 export default function Gallery() {
-  return <h1>Gallery Page</h1>;
+  return (
+    <section>
+      <ComingSoon />
+    </section>
+  );
 }
