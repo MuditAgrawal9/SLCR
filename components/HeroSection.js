@@ -19,7 +19,7 @@ export default function HeroSection() {
   }, []);
 
   return (
-    <section className="flex flex-col md:flex-row items-center justify-between mx-auto px-6 md:px-12 lg:px-16 pt-4">
+    <section className="flex flex-col md:flex-row items-center justify-between mx-auto px-6 md:px-12 lg:px-16 pt-4 bg-gradient-to-br from-blue-200 via-white to-gray-200">
       {/* Left Side - Text Content */}
       <div className="md:w-1/2 text-center md:text-left space-y-4">
         <h1 className="text-3xl md:text-4xl font-bold text-blue-600">

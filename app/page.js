@@ -1,6 +1,8 @@
 "use client";
 import { motion, useScroll, useTransform } from "framer-motion";
 import HeroSection from "../components/HeroSection";
+import Projects from "./projects/page";
+import ImportantWebsites from "@/components/ImportantWebsites";
 
 const sections = [
   {
@@ -58,6 +60,9 @@ export default function Home() {
           ))}
         </motion.section>
       ))}
+
+      <Projects />
+      <ImportantWebsites/>
     </main>
   );
 }
