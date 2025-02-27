@@ -137,13 +137,13 @@ export default function Navbar() {
             setIsOpen={setIsDropdownOpen}
             type="projects"
           >
-            <DropdownItem href="/projects/dss-wrm" text="DSS-WRM" />
+            <DropdownItem href="/projects/project1" text="DSS-WRM" />
             <DropdownItem
-              href="/projects/fingerprint-analysis"
+              href="/projects/project2"
               text="Fingerprint Analysis"
             />
             <DropdownItem
-              href="/projects/hydrological-modelling"
+              href="/projects/project3"
               text="Hydrological Modelling of Varuna"
             />
           </Dropdown>
@@ -153,9 +153,9 @@ export default function Navbar() {
             setIsOpen={setIsDropdownOpen}
             type="activities"
           >
-            <DropdownItem href="/activities/rhar-2025" text="RHAR 2025" />
+            <DropdownItem href="/activities/rhar" text="RHAR 2025" />
             <DropdownItem
-              href="/activities/peoples-varuna"
+              href="/activities/peoples_varuna"
               text="People’s Varuna"
             />
           </Dropdown>
