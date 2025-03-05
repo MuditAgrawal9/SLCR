@@ -22,7 +22,6 @@ const NavItem = ({ href, text }) => (
 );
 
 /* Dropdown Component */
-
 const Dropdown = ({ label, children, isOpen, setIsOpen, type }) => (
   <li
     className="relative group"
@@ -75,9 +74,55 @@ const MobileNavItem = ({ href, text, setIsOpen }) => (
   </li>
 );
 
+const MobileDropdown = ({ label, items, isOpen, setIsOpen, type }) => (
+  <li className="px-6 py-3 border-b border-gray-300">
+    <button
+      className="flex justify-between w-full text-left text-lg font-medium text-gray-800"
+      onClick={() => setIsOpen((prev) => ({ ...prev, [type]: !prev[type] }))}
+    >
+      {label}
+      <ChevronDown
+        size={18}
+        className={`transition-transform duration-300 ${
+          isOpen ? "rotate-180" : "rotate-0"
+        }`}
+      />
+    </button>
+
+    <AnimatePresence>
+      {isOpen && (
+        <motion.ul
+          initial={{ opacity: 0, height: 0 }}
+          animate={{ opacity: 1, height: "auto" }}
+          exit={{ opacity: 0, height: 0 }}
+          className="mt-2 pl-4 space-y-2 text-gray-700"
+        >
+          {items.map((item, index) => (
+            <li key={index}>
+              <Link
+                href={item.href}
+                onClick={() => setIsOpen(false)}
+                className="block py-2 pl-4 border-l-2 border-blue-500"
+              >
+                {item.text}
+              </Link>
+            </li>
+          ))}
+        </motion.ul>
+      )}
+    </AnimatePresence>
+  </li>
+);
+
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false); // Mobile menu state
   const [isDropdownOpen, setIsDropdownOpen] = useState({
+    about: false,
+    projects: false,
+    activities: false,
+  });
+
+  const [isMobileDropdownOpen, setIsMobileDropdownOpen] = useState({
     about: false,
     projects: false,
     activities: false,
@@ -177,10 +222,47 @@ export default function Navbar() {
           >
             <ul className="flex flex-col text-lg font-medium text-gray-800 space-y-2 py-4">
               <MobileNavItem href="/" text="Home" setIsOpen={setIsOpen} />
+              <MobileDropdown
+                label="About"
+                type="about"
+                isOpen={isMobileDropdownOpen.about}
+                setIsOpen={setIsMobileDropdownOpen}
+                items={[
+                  { href: "/about/slcr", text: "SLCR" },
+                  { href: "/about/partner", text: "Partner Institutes" },
+                ]}
+              />
               <MobileNavItem
                 href="/secretariat"
                 text="Secretariat"
                 setIsOpen={setIsOpen}
+              />
+              <MobileDropdown
+                label="Projects"
+                type="projects"
+                isOpen={isMobileDropdownOpen.projects}
+                setIsOpen={setIsMobileDropdownOpen}
+                items={[
+                  { href: "/projects/project1", text: "DSS-WRM" },
+                  { href: "/projects/project2", text: "Fingerprint Analysis" },
+                  {
+                    href: "/projects/project3",
+                    text: "Hydrological Modelling of Varuna",
+                  },
+                ]}
+              />
+              <MobileDropdown
+                label="Activities"
+                type="activities"
+                isOpen={isMobileDropdownOpen.activities}
+                setIsOpen={setIsMobileDropdownOpen}
+                items={[
+                  { href: "/activities/rhar", text: "RHAR 2025" },
+                  {
+                    href: "/activities/peoples_varuna",
+                    text: "People’s Varuna",
+                  },
+                ]}
               />
               <MobileNavItem href="/data" text="Data" setIsOpen={setIsOpen} />
               <MobileNavItem href="/media" text="Media" setIsOpen={setIsOpen} />

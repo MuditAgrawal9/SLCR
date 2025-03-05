@@ -1,11 +1,11 @@
 const ImportantWebsites = () => {
   const links = [
-    { name: "Central Pollution Control Board", url: "#" },
-    { name: "National Mission for Clean Ganga", url: "#" },
-    { name: "Central Ground Water Board", url: "#" },
+    { name: "Central Pollution Control Board", url: "https://www.cpcb.nic.in/" },
+    { name: "National Mission for Clean Ganga", url: "https://nmcg.nic.in/" },
+    { name: "Central Ground Water Board", url: "https://cgwb.gov.in/" },
     { name: "National Institute of Hydrology", url: "https://nihroorkee.gov.in/" },
-    { name: "India-WRIS", url: "#" },
-    { name: "Ministry of Jal Shakti", url: "#" },
+    { name: "India-WRIS", url: "https://indiawris.gov.in/wris/#/" },
+    { name: "Ministry of Jal Shakti", url: "https://jalshakti.gov.in/" },
   ];
 
   const handleClick = (e, url) => {

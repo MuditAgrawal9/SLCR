@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 export default function Project2() {
   return (
     <main className="bg-white text-gray-900">
@@ -18,7 +20,26 @@ export default function Project2() {
         </div>
       </section>
 
-      <section className="bg-gray-100 py-12 px-6">
+      {/* Progress Section */}
+      <section className="py-12 px-6 bg-gray-100">
+        <div className="max-w-5xl mx-auto text-center">
+          <h2 className="text-3xl font-semibold text-blue-900 mb-6">
+            Progress Report
+          </h2>
+          <div className="flex justify-center">
+            <Image
+              src="/P_2.0.jpg" // Change this to your actual image path
+              alt="Progress Report"
+              width={1000} // Adjust width as needed
+              height={200} // Adjust height as needed
+              className="rounded-lg shadow-lg"
+            />
+          </div>
+        </div>
+      </section>
+
+      {/* Team Section */}
+      <section className="py-12 px-6">
         <div className="max-w-5xl mx-auto">
           <h2 className="text-4xl font-bold text-blue-900 text-center mb-8">
             Team

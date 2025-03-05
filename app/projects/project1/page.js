@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 export default function DSS() {
   const members = [
     {
@@ -13,7 +15,7 @@ export default function DSS() {
         "Prof P. K. Mishra, Department of Chemical Engineering, IIT(BHU)",
         "Dr. Tanima Dutta, Associate Professor, Department of Computer Sc. and Engg., IIT(BHU)",
         "Dr. Shyam Kamal, Associate Professor, Dept of Electrical Engineering, IIT(BHU)",
-        "Dr. Medha Jha, Associate Professor, Department of Civil Engineering",
+        "Dr. Medha Jha, Associate Professor, Department of Civil Engineering, IIT(BHU)",
         "Dr. Om Damani, Professor, Department of Computer Science, IIT Bombay",
         "Dr. Pooja Prasad, Assistant Professor, School of Public Policy, IIT Delhi",
         "Dr. Nikhil Bugalia, Assistant Professor, Department of Civil Engineering, IIT Madras",
@@ -44,8 +46,26 @@ export default function DSS() {
         </div>
       </section>
 
-      {/* Team DSS Section */}
+      {/* Progress Section */}
       <section className="py-12 px-6 bg-gray-100">
+        <div className="max-w-5xl mx-auto text-center">
+          <h2 className="text-3xl font-semibold text-blue-900 mb-6">
+            Progress Report
+          </h2>
+          <div className="flex justify-center">
+            <Image
+              src="/P_1.0.jpg" // Change this to your actual image path
+              alt="Progress Report"
+              width={1000} // Adjust width as needed
+              height={200} // Adjust height as needed
+              className="rounded-lg shadow-lg"
+            />
+          </div>
+        </div>
+      </section>
+
+      {/* Team Section */}
+      <section className="py-12 px-6">
         <div className="max-w-5xl mx-auto">
           <h2 className="text-3xl font-semibold text-blue-900 text-center mb-8">
             Team DSS
