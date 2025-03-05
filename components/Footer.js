@@ -6,7 +6,13 @@ export default function Footer() {
       {/* Logos Section */}
       <div className="bg-gray-100 py-6 flex justify-center items-center gap-4 flex-wrap px-4">
         {[
-          { src: "/iitbhu.avif", alt: "IITBHU Logo", sm: 10, md: 80, lg: 100 },
+          {
+            src: "/institutes/iitbhu.avif",
+            alt: "IITBHU Logo",
+            sm: 10,
+            md: 80,
+            lg: 100,
+          },
           {
             src: "/namiti_gange.gif",
             alt: "Namami Gange Logo",
@@ -26,7 +32,7 @@ export default function Footer() {
             alt: "Denmark Logo",
             sm: 140,
             md: 160,
-            lg: 180,
+            lg: 250,
           },
           {
             src: "/india_wris.png",
