@@ -1,9 +1,7 @@
-import ComingSoon from "@/components/ComingSoon";
+import { EB_Garamond } from "next/font/google";
 
-export default function Media() {
-  return (
-    <section>
-      <ComingSoon />
-    </section>
-  );
+const garamond = EB_Garamond({ subsets: ["latin"], weight: "400" });
+
+export default function Page() {
+  return <p className={garamond.className}>This text is in Garamond</p>;
 }

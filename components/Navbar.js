@@ -134,35 +134,55 @@ export default function Navbar() {
   if (!isMounted) return null;
 
   return (
-    <nav className="bg-white/90 backdrop-blur-lg shadow-md sticky top-0 z-50 w-full">
+    <nav className="w-full bg-white shadow-lg z-50 md:absolute top-0 right-0 left-0">
       {/* Header Section */}
-      <div className="max-w-7xl mx-auto px-6 py-3 flex items-center justify-between">
-        {/* Logo & Title */}
-        <div className="flex items-center space-x-4">
-          <Link href="/">
+      <div className="flex max-md:flex-col max-md:gap-y-2 items-center justify-between space-x-4 p-2 lg:px-40">
+        <div className="flex space-x-10 justify-between items-center">
+          <div className="max-sm:w-[160px]">
+            <Image
+              src="/denmark.png"
+              alt="ministry of denmark logo"
+              width={200}
+              height={70}
+              className="rounded-md object-cover "
+            />
+          </div>
+          <div className="max-sm:w-[90px]">
+            <Image
+              src="/Ministry_of_Jal_Shakti.svg"
+              alt="Jal Shakti"
+              width={100}
+              height={70}
+              className="rounded-md object-cover "
+            />
+          </div>
+        </div>
+        <h1 className="text-2xl lg:text-3xl xl:text-4xl text-center text-gray-900 font-bold font-garamond">
+          Smart Laboratory on Clean River
+        </h1>
+        <div className="flex space-x-10 md:space-x-4 xl:space-x-10 justify-between items-center">
+          <div className="max-sm:w-[160px]">
             <Image
               src="/Logo_edited.png"
-              alt="SLCR Logo"
-              width={160}
-              height={50}
+              alt="slcr logo"
+              width={100}
+              height={70}
+              className="rounded-md object-cover "
             />
-          </Link>
-          <h1 className="text-xl md:text-4xl font-bold text-blue-600">
-            Smart Laboratory on Clean River
-          </h1>
+          </div>
+          <div className="max-sm:w-[60px]">
+            <Image
+              src="/namiti_gange.gif"
+              alt="Namami gange logo"
+              width={70}
+              height={70}
+              className="rounded-md object-cover "
+            />
+          </div>
         </div>
-
-        {/* Mobile Menu Button */}
-        <button
-          onClick={() => setIsOpen(!isOpen)}
-          className="md:hidden text-blue-700"
-        >
-          {isOpen ? <X size={28} /> : <Menu size={28} />}
-        </button>
       </div>
-
       {/* Desktop Navigation */}
-      <div className="border-t border-gray-200 bg-blue-600">
+      <div className="border-t border-gray-200 bg-[#081f5c]">
         <ul className="hidden md:flex justify-center space-x-10 text-lg font-semibold text-gray-100 py-3">
           <NavItem href="/" text="Home" />
           <Dropdown
@@ -205,10 +225,16 @@ export default function Navbar() {
             />
           </Dropdown>
           <NavItem href="/data" text="Data" />
-          <NavItem href="/media" text="Media" />
-          <NavItem href="/gallery" text="Gallery" />
-          <NavItem href="/contact" text="Contact Us" />
+          {/* <NavItem href="/media" text="Media" /> */}
+          <NavItem href="/gallery" text="Median and Gallery" />
+          <NavItem href="/contact" text="Contact" />
         </ul>
+      </div>
+      {/* Mobile Menu Button */}
+      <div className="md:hidden flex justify-end px-4 py-3 bg-[#081f5c]">
+        <button onClick={() => setIsOpen(!isOpen)} className="text-white">
+          {isOpen ? <X size={28} /> : <Menu size={28} />}
+        </button>
       </div>
 
       {/* Mobile Menu */}
@@ -218,7 +244,7 @@ export default function Navbar() {
             initial={{ opacity: 0, y: -10 }}
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -10 }}
-            className="md:hidden bg-gray-100/95 backdrop-blur-lg shadow-lg absolute top-full left-0 w-full"
+            className="z-50 md:hidden absolute left-0 right-0 bg-gray-100/95 backdrop-blur-lg shadow-lg"
           >
             <ul className="flex flex-col text-lg font-medium text-gray-800 space-y-2 py-4">
               <MobileNavItem href="/" text="Home" setIsOpen={setIsOpen} />

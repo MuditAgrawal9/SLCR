@@ -3,6 +3,11 @@ import { motion, useScroll, useTransform } from "framer-motion";
 import HeroSection from "../components/HeroSection";
 import Projects from "./projects/page";
 import ImportantWebsites from "@/components/ImportantWebsites";
+import Hero from "@/components/Hero";
+import ImportantLinks from "@/components/ImportantLinks";
+import OurProjects from "@/components/OurProjects";
+import Partnership from "@/components/Partnership";
+import AboutProject from "@/components/AboutProject";
 
 const sections = [
   {
@@ -35,34 +40,12 @@ const sections = [
 
 export default function Home() {
   return (
-    <main className="bg-gray-100 text-gray-900">
-      <HeroSection />
-
-      {sections.map((section, index) => (
-        <motion.section
-          key={index}
-          initial={{ opacity: 0, y: 50, scale: 0.9 }}
-          whileInView={{ opacity: 1, y: 0, scale: 1 }}
-          viewport={{ once: false }}
-          transition={{ duration: 0.6 }}
-          className={`py-12 px-6 text-center ${
-            index % 2 === 0 ? "bg-white" : "bg-gray-100"
-          }`}
-        >
-          <h3 className="text-3xl font-bold text-gray-900">{section.title}</h3>
-          {section.content.map((paragraph, idx) => (
-            <p
-              key={idx}
-              className="mt-4 text-lg text-gray-700 max-w-4xl mx-auto text-justify"
-            >
-              {paragraph}
-            </p>
-          ))}
-        </motion.section>
-      ))}
-
-      <Projects />
-      <ImportantWebsites/>
-    </main>
+    <>
+      <Hero />
+      <ImportantLinks />
+      <OurProjects/>
+      <Partnership/>
+      <AboutProject/>
+    </>
   );
 }
