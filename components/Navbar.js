@@ -12,7 +12,7 @@ const NavItem = ({ href, text }) => (
   <li>
     <Link
       href={href}
-      className="relative px-4 py-2 transition-all duration-300 text-gray-100 hover:text-white
+      className="relative transition-all duration-300 text-gray-100 hover:text-white
                after:absolute after:left-0 after:bottom-0 after:w-0 after:h-[2px] after:bg-white 
                after:transition-all after:duration-300 hover:after:w-full"
     >
@@ -28,7 +28,7 @@ const Dropdown = ({ label, children, isOpen, setIsOpen, type }) => (
     onMouseEnter={() => setIsOpen((prev) => ({ ...prev, [type]: true }))}
     onMouseLeave={() => setIsOpen((prev) => ({ ...prev, [type]: false }))}
   >
-    <button className="flex items-center gap-2 px-4 py-auto text-gray-100 transition-all duration-300 hover:text-white">
+    <button className="flex items-center gap-1 py-auto text-gray-100 transition-all duration-300 hover:text-white">
       {label}
       <ChevronDown
         size={16}
@@ -58,7 +58,7 @@ const DropdownItem = ({ href, text }) => (
   <li>
     <Link
       href={href}
-      className="block px-5 py-3 text-blue-600 hover:bg-blue-50 transition-all duration-300  whitespace-nowrap"
+      className="block px-5 py-3 text-[#081f5c] hover:bg-blue-50 transition-all duration-300  whitespace-nowrap"
     >
       {text}
     </Link>
@@ -134,7 +134,7 @@ export default function Navbar() {
   if (!isMounted) return null;
 
   return (
-    <nav className="w-full bg-white shadow-lg z-50 md:absolute top-0 right-0 left-0">
+    <nav className="w-full bg-white shadow-lg z-50 md:relative top-0 right-0 left-0">
       {/* Header Section */}
       <div className="flex max-md:flex-col max-md:gap-y-2 items-center justify-between space-x-4 p-2 lg:px-40">
         <div className="flex space-x-10 justify-between items-center">
@@ -183,7 +183,7 @@ export default function Navbar() {
       </div>
       {/* Desktop Navigation */}
       <div className="border-t border-gray-200 bg-[#081f5c]">
-        <ul className="hidden md:flex justify-center space-x-10 text-lg font-semibold text-gray-100 py-3">
+        <ul className="hidden md:flex justify-center space-x-12 py-4 text-md font-semibold text-gray-100">
           <NavItem href="/" text="Home" />
           <Dropdown
             label="About"
@@ -226,7 +226,7 @@ export default function Navbar() {
           </Dropdown>
           <NavItem href="/data" text="Data" />
           {/* <NavItem href="/media" text="Media" /> */}
-          <NavItem href="/gallery" text="Median and Gallery" />
+          <NavItem href="/gallery" text="Media and Gallery" />
           <NavItem href="/contact" text="Contact" />
         </ul>
       </div>

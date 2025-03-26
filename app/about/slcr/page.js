@@ -7,7 +7,7 @@ export default function AboutSLCR() {
     <main>
       {/* About Section */}
       <motion.section
-        className="py-16 px-6 bg-gray-100 text-center"
+        className="py-10 px-6 bg-white text-center"
         initial={{ opacity: 0, y: 50 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6 }}
@@ -49,9 +49,9 @@ export default function AboutSLCR() {
       </motion.section>
 
       {/* Concept Section */}
-      <section className="py-16 px-6 bg-white text-center">
+      <section className="pt-10 px-6 bg-[#F5F5DC] text-center">
         <div className="max-w-5xl mx-auto">
-          <h2 className="text-3xl font-bold text-blue-900 mb-6">
+          <h2 className="text-3xl font-bold text-[#081f5c] mb-6">
             Concept of Smart Living Lab on Clean River (SLCR)
             <br /> Small River Rejuvenation
           </h2>
@@ -125,9 +125,9 @@ export default function AboutSLCR() {
       </section>
 
       {/* Structure Section */}
-      <section className="py-16 px-6 bg-white text-center">
+      <section className="py-16 px-6 bg-[#081f5c] text-center">
         <div className="max-w-6xl mx-auto">
-          <h2 className="text-4xl font-bold text-blue-900 mb-6">
+          <h2 className="text-4xl font-bold text-white mb-6">
             Structure of SLCR
           </h2>
           <Image
