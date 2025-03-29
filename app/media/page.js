@@ -1,7 +1,11 @@
-import { EB_Garamond } from "next/font/google";
-
-const garamond = EB_Garamond({ subsets: ["latin"], weight: "400" });
+import Gallery from "@/components/Gallery";
+import NewsComponent from "@/components/News";
 
 export default function Page() {
-  return <p className={garamond.className}>This text is in Garamond</p>;
+  return (
+    <>
+      <NewsComponent />
+      <Gallery />
+    </>
+  );
 }

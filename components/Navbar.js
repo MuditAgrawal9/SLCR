@@ -136,7 +136,7 @@ export default function Navbar() {
   return (
     <nav className="w-full bg-white shadow-lg z-50 md:relative top-0 right-0 left-0">
       {/* Header Section */}
-      <div className="flex max-md:flex-col max-md:gap-y-2 items-center justify-between space-x-4 p-2 lg:px-40">
+      <div className="flex max-md:flex-col max-md:gap-y-2 items-center justify-between p-2 lg:px-20">
         <div className="flex space-x-10 justify-between items-center">
           <div className="max-sm:w-[160px]">
             <Image
@@ -157,10 +157,10 @@ export default function Navbar() {
             />
           </div>
         </div>
-        <h1 className="text-2xl lg:text-3xl xl:text-4xl text-center text-gray-900 font-bold font-garamond">
+        <h1 className="text-2xl lg:text-4xl xl:text-5xl text-center text-gray-900 font-bold font-garamond px-6">
           Smart Laboratory on Clean River
         </h1>
-        <div className="flex space-x-10 md:space-x-4 xl:space-x-10 justify-between items-center">
+        <div className="flex space-x-10 md:space-x-4 xl:space-x-1 justify-between items-center">
           <div className="max-sm:w-[160px]">
             <Image
               src="/Logo_edited.png"
@@ -226,7 +226,7 @@ export default function Navbar() {
           </Dropdown>
           <NavItem href="/data" text="Data" />
           {/* <NavItem href="/media" text="Media" /> */}
-          <NavItem href="/gallery" text="Media and Gallery" />
+          <NavItem href="/media" text="Media and Gallery" />
           <NavItem href="/contact" text="Contact" />
         </ul>
       </div>
@@ -291,9 +291,9 @@ export default function Navbar() {
                 ]}
               />
               <MobileNavItem href="/data" text="Data" setIsOpen={setIsOpen} />
-              <MobileNavItem href="/media" text="Media" setIsOpen={setIsOpen} />
+              {/* <MobileNavItem href="/media" text="Media" setIsOpen={setIsOpen} /> */}
               <MobileNavItem
-                href="/gallery"
+                href="/media"
                 text="Gallery"
                 setIsOpen={setIsOpen}
               />
