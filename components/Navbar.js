@@ -134,7 +134,7 @@ export default function Navbar() {
   if (!isMounted) return null;
 
   return (
-    <nav className="w-full bg-white shadow-lg z-50 md:relative top-0 right-0 left-0">
+    <nav className="w-full bg-white shadow-lg z-50 sticky top-0 right-0 left-0">
       {/* Header Section */}
       <div className="flex max-md:flex-col max-md:gap-y-2 items-center justify-between p-2 lg:px-20">
         <div className="flex space-x-10 justify-between items-center">

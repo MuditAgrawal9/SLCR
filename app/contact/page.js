@@ -60,7 +60,11 @@ export default function Contact() {
                 className="w-full px-5 py-3 border border-gray-300 rounded-lg shadow-sm focus:ring-2 focus:ring-blue-500 outline-none"
                 placeholder="Your Name"
               />
-              {errors.name && <p className="text-red-500 text-sm mt-1">{errors.name.message}</p>}
+              {errors.name && (
+                <p className="text-red-500 text-sm mt-1">
+                  {errors.name.message}
+                </p>
+              )}
             </div>
 
             <div>
@@ -76,7 +80,11 @@ export default function Contact() {
                 className="w-full px-5 py-3 border border-gray-300 rounded-lg shadow-sm focus:ring-2 focus:ring-blue-500 outline-none"
                 placeholder="Your Email"
               />
-              {errors.email && <p className="text-red-500 text-sm mt-1">{errors.email.message}</p>}
+              {errors.email && (
+                <p className="text-red-500 text-sm mt-1">
+                  {errors.email.message}
+                </p>
+              )}
             </div>
 
             <div>
@@ -86,7 +94,11 @@ export default function Contact() {
                 rows="4"
                 placeholder="Your Message"
               />
-              {errors.message && <p className="text-red-500 text-sm mt-1">{errors.message.message}</p>}
+              {errors.message && (
+                <p className="text-red-500 text-sm mt-1">
+                  {errors.message.message}
+                </p>
+              )}
             </div>
 
             <motion.button
@@ -106,7 +118,10 @@ export default function Contact() {
             </h3>
             <ul className="mt-3 space-y-2 text-gray-800">
               {workingHours.map((item, index) => (
-                <li key={index} className="flex justify-between px-3 py-2 bg-blue-100 rounded-md">
+                <li
+                  key={index}
+                  className="flex justify-between px-3 py-2 bg-blue-100 rounded-md"
+                >
                   <span>{item.day}</span>
                   <span>{item.time}</span>
                 </li>
@@ -117,7 +132,10 @@ export default function Contact() {
           {/* Contact Email */}
           <div className="mt-6 text-lg text-gray-800">
             <p className="font-semibold">📧 Email Us:</p>
-            <a href="mailto:contact@example.com" className="text-blue-600 hover:underline">
+            <a
+              href="mailto:contact@example.com"
+              className="text-blue-600 hover:underline"
+            >
               slcrvaranasi@gmail.com
             </a>
           </div>
@@ -125,10 +143,12 @@ export default function Contact() {
 
         {/* Right: Google Map */}
         <div className="flex flex-col items-center">
-          <h3 className="text-xl font-semibold text-gray-900 mb-4">📍 Find Us Here</h3>
+          <h3 className="text-xl font-semibold text-gray-900 mb-4">
+            📍 Find Us Here
+          </h3>
           <iframe
             className="w-full h-96 rounded-lg shadow-md border"
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3665.6385374163945!2d82.9911923752902!3d25.26772083067973!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x398e31e8c1555555%3A0xd2a8f3f9b33f2ff3!2sDepartment%20of%20Civil%20Engineering%2C%20IIT%20(Banaras%20Hindu%20University)%2C%20Banaras%20Hindu%20University%20Campus%2C%20Varanasi%2C%20Uttar%20Pradesh%20221011!5e0!3m2!1sen!2sin!4v1709175823045!5m2!1sen!2sin"
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3608.2267477902165!2d82.98886121156859!3d25.262956677575488!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x398e322a6031e99d%3A0x962763bc1a36226!2sDepartment%20of%20Civil%20Engineering%2C%20IIT%20(Banaras%20Hindu%20University)!5e0!3m2!1sen!2sin!4v1743340882731!5m2!1sen!2sin"
             allowFullScreen=""
             loading="lazy"
           ></iframe>
